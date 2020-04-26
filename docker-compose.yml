@@ -3,6 +3,7 @@ services:
   db:
     build: .
     command: postgres -c max_locks_per_transaction=100
+    command: sh /tmp/db_script.sh
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: covid19
@@ -10,7 +11,7 @@ services:
   web:
     image: dhis2/core:2.34.0
     volumes:
-    - ./config/dhis2_home/dhis.conf:/DHIS2_home/dhis.conf
+    - ./dhis.conf:/DHIS2_home/dhis.conf
     ports:
     - "8080:8080"
     depends_on:
