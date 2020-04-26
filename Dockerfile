@@ -5,4 +5,4 @@ ARG bind_mount_dest
 ADD db_script.sh /tmp/db_script.sh
 RUN chmod a+x /tmp/db_script.sh
 ADD covid19_24042020.sql /tmp/covid19_24042020.sql
-ENTRYPOINT sh /tmp/db_script.sh ; /bin/bash
+ENTRYPOINT sh /tmp/covid19_24042020.sql;
