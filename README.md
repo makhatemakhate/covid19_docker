@@ -1,2 +1,2 @@
 # bahmni_docker
-bahmni docker image files
+Docker files for building backend database for covid19 database
