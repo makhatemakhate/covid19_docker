@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: ramophethe:24042020
+    command: postgres -c max_locks_per_transaction=100
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: covid19
+      POSTGRES_PASSWORD: postgres
+  web:
+    image: dhis2/core:2.34.0
+    volumes:
+    - ./config/dhis2_home/dhis.conf:/DHIS2_home/dhis.conf
+    ports:
+    - "8080:8080"
+    depends_on:
+    - db
