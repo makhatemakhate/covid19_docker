@@ -2,11 +2,11 @@
 # Configurations
 #####################
 # backup the original config folder
-sudo mv -b /var/www/bahmni_config /var/www/bahmni_config-original
+######sudo mv -b /var/www/bahmni_config /var/www/bahmni_config-original
 # Link your config folder
-sudo ln -s /development/bahmni_config /var/www/bahmni_config
+######sudo ln -s /development/bahmni_config /var/www/bahmni_config
 # Make bahmni user the owner for this new link
-sudo chown -h bahmni:bahmni /var/www/bahmni_config 
+######sudo chown -h bahmni:bahmni /var/www/bahmni_config 
 
 #####################
 # Reports
@@ -23,8 +23,8 @@ sudo chown -h bahmni:bahmni /var/www/bahmni_config
 # Development
 #####################
 # Rename the original folder for backup
-sudo mv /var/www/bahmniapps /var/www/bahmniapps-original
+######sudo mv /var/www/bahmniapps /var/www/bahmniapps-original
 # Linking EMR UI folders
-sudo ln -s /development/openmrs-module-bahmniapps/ui/app /var/www/bahmniapps
+######sudo ln -s /development/openmrs-module-bahmniapps/ui/app /var/www/bahmniapps
 # Make the user bahmni owner of this new link
-sudo chown -h bahmni:bahmni /var/www/bahmniapps
+######sudo chown -h bahmni:bahmni /var/www/bahmniapps
